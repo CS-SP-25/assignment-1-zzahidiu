@@ -2,9 +2,8 @@ public abstract class State {
     private String name;
     private SalesTaxBehavior taxBehavior;
 
-    public State(String name, SalesTaxBehavior taxBehavior) {
+    public State(String name) {
         this.name = name;
-        this.taxBehavior = taxBehavior;
     }
 
     public String getName() {
@@ -13,6 +12,10 @@ public abstract class State {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setTaxBehavior(SalesTaxBehavior taxBehavior) {
+        this.taxBehavior = taxBehavior;
     }
 
     public void showTax(double value) {
